@@ -83,16 +83,20 @@ asyncio.run(run())
 
 - Added test cases for both valid and invalid login scenarios.
 
-5. Project Structure:
+5. **Project Structure:**
 
 - Organized the project structure to follow best practices.
+
+6. **Support for Multiple Browsers:**
+
+- The tests are configured to run on multiple browsers (Chromium, Firefox, WebKit) using `pytest-playwright`.
 
 ### Errors in the initial script:
 
 Speaking of the initial script, there are a few issues that I would like to highlight:
 
 - Asynchronous script for a simple login flow.
-- Keyword `with` is recommended to ensure ensures that Playwright resources are properly initialized and cleaned up, even if an error occurs during execution. Therefore `playwright.stop()` is not required.
+- Keyword `with` is recommended to ensure that Playwright resources are properly initialized and cleaned up, even if an error occurs during execution. Therefore `playwright.stop()` is not required.
 - Wrong selectors are used in the script.
 - Assertion is missing in the script.
 - Unnecessary `page.wait_for_timeout(5000)` is used in the script. Playwright has built-in wait functions.
